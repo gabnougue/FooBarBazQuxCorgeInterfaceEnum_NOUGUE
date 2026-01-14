@@ -6,7 +6,7 @@ import java.util.List;
 import com.jad.Grault;
 import com.jad.IQux;
 
-public class Foo {
+public class Foo implements IFoo {
     private IBaz baz;
     private List<IBar> bars;
     private IQux qux;

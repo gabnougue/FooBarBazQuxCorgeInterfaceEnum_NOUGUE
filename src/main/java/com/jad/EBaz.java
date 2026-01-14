@@ -11,6 +11,10 @@ public enum EBaz implements IBaz {
         this.name = name;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     @Override
     public void doSomethingLikeABaz() {
         // Do nothing
