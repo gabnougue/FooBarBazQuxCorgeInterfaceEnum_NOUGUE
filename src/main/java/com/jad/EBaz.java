@@ -13,7 +13,7 @@ public enum EBaz implements IBaz {
 
     @Override
     public void doSomethingLikeABaz() {
-        System.out.println("Doing something like a " + name);
+        // Do nothing
     }
     
 }
