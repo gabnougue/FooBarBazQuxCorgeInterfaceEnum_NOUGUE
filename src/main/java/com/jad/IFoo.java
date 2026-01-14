@@ -4,4 +4,5 @@ import com.jad.ICorge;
 
 public interface IFoo {
     ICorge getCorge();
+    void setCorge(ICorge corge);
 }
