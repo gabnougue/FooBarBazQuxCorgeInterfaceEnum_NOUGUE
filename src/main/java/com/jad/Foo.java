@@ -36,7 +36,8 @@ public class Foo implements IFoo {
     public ICorge getCorge() {
         return corge;
     }
-    public void setCorge(ICorge corge) {
+    public IFoo setCorge(ICorge corge) {
         this.corge = corge;
+        return this;
     }
 }
