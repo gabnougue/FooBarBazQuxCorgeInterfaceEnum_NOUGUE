@@ -15,6 +15,7 @@ public class Foo implements IFoo {
     public Foo(IBaz baz) {
         this.baz = baz;
         this.bars = new ArrayList<>();
+        this.qux = new Qux();
     }
 
     public void addBar(IBar bar) {
