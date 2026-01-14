@@ -4,53 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.jad.Grault;
+import com.jad.IQux;
 
 public class Foo {
-    private Bar bar;
-    private List<Baz> bazs;
-    private Qux qux;
-    private Corge corge;
-    private List<Grault> graults;
+    private IBaz baz;
+    private List<IBar> bars;
+    private IQux qux;
+    private ICorge corge;
 
-    public Foo(Bar bar) {
-        this.bar = bar;
-        this.bazs = new ArrayList<>();
-        this.qux = new Qux();
-        this.graults = new ArrayList<>();
+    public Foo(IBaz baz) {
+        this.baz = baz;
+        this.bars = new ArrayList<>();
     }
 
-    public void addBaz(Baz baz) {
-        this.bazs.add(baz);
+    public void addBar(IBar bar) {
+        this.bars.add(bar);
     }
 
-    public void addGrault() {
-        Grault grault = new Grault(this);
-        this.graults.add(grault);
+    public IBaz getBaz() {
+        return baz;
     }
-
-    // Getters
-    public Bar getBar() {
-        return bar;
+    public List<IBar> getBars() {
+        return bars;
     }
-    public List<Baz> getBazs() {
-        return bazs;
-    }
-    public Qux getQux() {
+    public IQux getQux() {
         return qux;
     }
-    public Corge getCorge() {
+    public void setQux(IQux qux) {
+        this.qux = qux;
+    }
+    public ICorge getCorge() {
         return corge;
     }
-    public List<Grault> getGraults() {
-        return graults;
-    }
-
-    // Setters
-    public void setCorge(Corge corge) {
-        if (this.corge != null) {
-            this.corge.setFoo(null);
-        }
+    public void setCorge(ICorge corge) {
         this.corge = corge;
-        corge.setFoo(this);
     }
 }
